@@ -5,7 +5,7 @@ import sys
 
 target_file = 'full.log'
 init_flag = True  
-time_kick = 1800
+#time_kick = 1800
 
 record_count = 0
 
@@ -28,6 +28,9 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
             if init_flag:
                 f_w = open(log_names, 'w')
                 with open(target_file, 'r', encoding='utf-8') as f:
+
+                    print("Writing with init at: " + ticks)
+
                     lines = f.readlines()
                     last_line = lines[-1]
                     f_w.write(ticks + " " + last_line + "\n")
@@ -37,6 +40,9 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
             else:
                 f_w = open(log_names, 'a')
                 with open(target_file, 'r', encoding='utf-8') as f:
+
+                    print("Writing with not init at: " + ticks)
+
                     lines = f.readlines()
                     last_line = lines[-1]
                     f_w.write(ticks + " " + last_line + "\n")
