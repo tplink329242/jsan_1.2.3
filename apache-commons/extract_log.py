@@ -19,12 +19,15 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
 
     while True:
 
+        ticks = time.time()
+        
         if not os.path.exists(target_file):
+            print("No logs found... sleeping")
             time.sleep(time_kick)
             continue
 
         try:
-            ticks = time.time()
+
             if init_flag:
                 f_w = open(log_names, 'w')
                 with open(target_file, 'r', encoding='utf-8') as f:
@@ -37,6 +40,7 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
                     record_count += 1
 
                 init_flag = False
+
             else:
                 f_w = open(log_names, 'a')
                 with open(target_file, 'r', encoding='utf-8') as f:
@@ -49,6 +53,7 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
                     record_count += 1
 
             f_w.close()
+
         except:
             pass
 
