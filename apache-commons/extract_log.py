@@ -11,6 +11,9 @@ record_count = 0
 
 def record_logs(time_count = 0, log_names = "reduced.log"):
 
+    print(time_count + "time is that")
+    print(log_names + "log is that")
+
     time_kick = time_count
 
     while True:
