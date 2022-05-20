@@ -26,7 +26,7 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
                 with open(target_file, 'r', encoding='utf-8') as f:
                     lines = f.readlines()
                     last_line = lines[-1]
-                    f_w.write(ticks + last_line + "\n")
+                    f_w.write(ticks + " " + last_line + "\n")
                     record_count += 1
 
                 init_flag = False
@@ -35,7 +35,7 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
                 with open(target_file, 'r', encoding='utf-8') as f:
                     lines = f.readlines()
                     last_line = lines[-1]
-                    f_w.write(ticks + last_line + "\n")
+                    f_w.write(ticks + " " + last_line + "\n")
                     record_count += 1
 
             f_w.close()
