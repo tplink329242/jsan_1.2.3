@@ -16,9 +16,7 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
     log_names += "_reduced.log"
 
     print("log name is: " + log_names)
-
     time_kick = int(time_count)
-    print(time_kick)
 
     while True:
 
