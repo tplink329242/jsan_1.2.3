@@ -20,13 +20,14 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
     while True:
 
         ticks = time.time()
-        
+
         if not os.path.exists(target_file):
-            print("No logs found... sleeping")
+            print("No logs found... sleeping at: " + ticks)
             time.sleep(time_kick)
             continue
 
         try:
+            print("Entering try block..." + ticks)
 
             if init_flag:
                 f_w = open(log_names, 'w')
