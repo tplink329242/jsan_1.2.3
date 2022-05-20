@@ -8,4 +8,4 @@ cd zxing/
 
 nohup sh run.sh > full.log 2>&1 &
 
-python extract_log.py 5 $0
+python extract_log.py 1800 $0
