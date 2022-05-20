@@ -3,8 +3,6 @@ import time
 import os
 import sys
 
-from sqlalchemy import false
-
 #time_kick = 1800
 
 record_count = 0
