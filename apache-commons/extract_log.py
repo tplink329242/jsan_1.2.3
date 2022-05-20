@@ -11,10 +11,11 @@ record_count = 0
 
 def record_logs(time_count = 0, log_names = "reduced.log"):
 
-    print(time_count + "time is that")
-    print(log_names + "log is that")
+    print("Frequency is: " + time_count + " seconds")
+    log_names += "_reduced.log"
+    print("log name is: " + log_names)
 
-    time_kick = time_count
+    time_kick = int(time_count)
 
     while True:
 
