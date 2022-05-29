@@ -8,4 +8,4 @@ cd /root/jsan_1.2.3/apache-commons/
 
 nohup sh run.sh > full.log 2>&1 &
 
-python extract_log.py 1800 $0
+python3 extract_log.py 1800 $0

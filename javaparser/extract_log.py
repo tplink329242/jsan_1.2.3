@@ -26,27 +26,20 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
             #print("Entering try block..." + ticks)
 
             if init_flag:
+                init_flag = False
                 f_w = open(log_names, 'w')
-
                 with open(target_file, 'r', encoding='utf-8') as f:
-
                     print("Writing with init at: " + ticks)
-
                     lines = f.readlines()
                     last_line = lines[-1]
                     f_w.write(ticks + " " + last_line + "\n")
                     record_count += 1
-
-                init_flag = False
-
+                
             else:
 
                 f_w = open(log_names, 'a')
-
                 with open(target_file, 'r', encoding='utf-8') as f:
-
                     print("Writing with not init at: " + ticks)
-
                     lines = f.readlines()
                     last_line = lines[-1]
                     f_w.write(ticks + " " + last_line + "\n")

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./jazzer --cp=commons-compress.jar --target_class="CompressZipFuzzer"
+./jazzer --cp=json-sanitizer.jar --autofuzz=com.google.json.JsonSanitizer::sanitize

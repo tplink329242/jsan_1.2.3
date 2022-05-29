@@ -1,8 +1,11 @@
-cd json-sanitizer/
+#!/bin/sh
 
-tar -zxvf jazzer_release.tar.gz
+export JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
 
-nohup ./jazzer --cp=json-sanitizer.jar --autofuzz=com.google.json.JsonSanitizer::sanitize > full.log 2>&1 &
+cd /root/jsan_1.2.3/json-sanitizer/
 
-python extract_log.py
+
+nohup sh run.sh > full.log 2>&1 &
+
+python3 extract_log.py 1800 $0
 
