@@ -50,6 +50,12 @@ def record_logs(time_count = 0, log_names = "reduced.log"):
         except:
             pass
 
+        if record_count >= 49:
+            break 
+        else:
+            print(record_count)
+
         time.sleep(time_kick)
 
+        
 record_logs(sys.argv[1],sys.argv[2])

@@ -2,4 +2,4 @@
 
 #./jazzer --cp=json-sanitizer.jar --autofuzz=com.google.json.JsonSanitizer::sanitize
 
-./jazzer --cp=json-sanitizer_Valid.jar --target_class="ValidJsonFuzzer" corpus
+./jazzer --cp=json-sanitizerV2.jar --instrumentation_includes=com.google.json.JsonSanitizer.** --target_class="IdempotenceFuzzer" corpus --coverage_report="report.log"
