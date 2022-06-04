@@ -5,9 +5,9 @@ import sys
 
 #time_kick = 1800
 
-record_count = 0
-
 def record_logs(time_count = 0, log_names = "reduced.log"):
+
+    record_count = 0
 
     target_file = 'full.log'
     init_flag = True  
